@@ -33,7 +33,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             int val = arr[i];
             if (val > maxSum) {
-                maxSum = arr[i];
+                maxSum = val;
             }
             System.out.println("Максимальная сумма трат за день составила " + maxSum);
         }
@@ -41,7 +41,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             int val = arr[i];
             if (val < minSum) ;
-            minSum = arr[i];
+            minSum = val;
         }
         System.out.println("Минимальная сумма трат за день составила " + minSum);
     }
@@ -58,16 +58,15 @@ public class Main {
 
         }
         public static void task4(){
-            char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+            int[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
             int i = 0;
             for (i = 0; i < reverseFullName.length -1; i++) {
                 for (int j = 0; j < reverseFullName.length -1; j++) {
                     if (reverseFullName[j] > reverseFullName[j + 1]){
                         int tmp = reverseFullName[j+1];
                         reverseFullName[j+1] = reverseFullName[j];
-                        reverseFullName = (char) tmp;
+                        reverseFullName = tmp;
                     }
-
                 }
             }
             System.out.print(reverseFullName[i]);
