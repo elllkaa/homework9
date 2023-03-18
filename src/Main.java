@@ -21,8 +21,8 @@ public class Main {
         int sum = 0;
         for (int index = 0; index < arr.length; index++) {
             sum = sum + arr[index];
-            System.out.println(sum);
         }
+        System.out.println(sum);
 
     }
 
@@ -31,44 +31,45 @@ public class Main {
         int[] arr = generateRandomArray();
         int maxSum = 1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > maxSum) {
-                maxSum = arr[i];
-                System.out.println("Максимальная сумма трат за день составила " + maxSum);
+            int val = arr[i];
+            if (val > maxSum) {
+                maxSum = val;
             }
+            System.out.println("Максимальная сумма трат за день составила " + maxSum);
         }
-        for (int i = arr.length; i > 0; i--) {
-                System.out.println("Минимальная сумма трат за день составила " + maxSum);
+        int minSum = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            int val = arr[i];
+            if (val < minSum) ;
+            minSum = val;
+        }
+        System.out.println("Минимальная сумма трат за день составила " + minSum);
+    }
 
-            }
+    public static void task3() {
+        System.out.println("Задача 3");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        for (int index = 0; index < arr.length; index++) {
+            sum = sum + arr[index];
         }
-        public static void task3(){
-            System.out.println("Задача 3");
-            int[] arr = generateRandomArray();
-            int sum = 0;
-            for (int index = 0; index < arr.length; index++) {
-                sum = sum + arr[index];
-                sum = sum / 30;
-                System.out.println(sum);
-            }
+        sum = sum / arr.length;
+        System.out.println(sum);
 
         }
         public static void task4(){
-            char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+            int[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
             int i = 0;
-            reverseFullName[0] = 11;
-            reverseFullName[1] = 10;
-            reverseFullName[2] = 9;
-            reverseFullName[3] = 8;
-            reverseFullName[4] = 7;
-            reverseFullName[5] = 6;
-            reverseFullName[6] = 5;
-            reverseFullName[7] = 4;
-            reverseFullName[8] = 3;
-            reverseFullName[9] = 2;
-            reverseFullName[10] = 1;
             for (i = 0; i < reverseFullName.length -1; i++) {
-                System.out.print(reverseFullName[i]);
+                for (int j = 0; j < reverseFullName.length -1; j++) {
+                    if (reverseFullName[j] > reverseFullName[j + 1]){
+                        int tmp = reverseFullName[j+1];
+                        reverseFullName[j+1] = reverseFullName[j];
+                        reverseFullName = tmp;
+                    }
+                }
             }
             System.out.print(reverseFullName[i]);
         }
     }
+
