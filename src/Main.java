@@ -29,21 +29,20 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
-        int maxSum = 1;
+        int maxSum = arr[0];
+        int minSum = arr[0];
         for (int i = 0; i < arr.length; i++) {
             int val = arr[i];
             if (val > maxSum) {
                 maxSum = val;
             }
-            System.out.println("Максимальная сумма трат за день составила " + maxSum);
+            if (val < minSum) {
+                minSum = val;
+            }
         }
-        int minSum = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            int val = arr[i];
-            if (val < minSum) ;
-            minSum = val;
-        }
+        System.out.println("Максимальная сумма трат за день составила " + maxSum);
         System.out.println("Минимальная сумма трат за день составила " + minSum);
+
     }
 
     public static void task3() {
@@ -58,18 +57,12 @@ public class Main {
 
         }
         public static void task4(){
-            int[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+            char [] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
             int i = 0;
-            for (i = 0; i < reverseFullName.length -1; i++) {
-                for (int j = 0; j < reverseFullName.length -1; j++) {
-                    if (reverseFullName[j] > reverseFullName[j + 1]){
-                        int tmp = reverseFullName[j+1];
-                        reverseFullName[j+1] = reverseFullName[j];
-                        reverseFullName = tmp;
-                    }
-                }
+            for (i = reverseFullName.length - 1; i >= 0; i--) {
+                System.out.print(reverseFullName[i]);
             }
-            System.out.print(reverseFullName[i]);
         }
+
     }
 
