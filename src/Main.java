@@ -30,21 +30,17 @@ public class Main {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
         int maxSum = arr[0];
+        int minSum = arr[0];
         for (int i = 0; i < arr.length; i++) {
             int val = arr[1];
             if (val > maxSum) {
                 maxSum = val;
             }
-        }
-            System.out.println("Максимальная сумма трат за день составила " + maxSum);
-
-        int minSum = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            int val = arr[i];
             if (val < minSum) {
                 minSum = val;
             }
         }
+        System.out.println("Максимальная сумма трат за день составила " + maxSum);
         System.out.println("Минимальная сумма трат за день составила " + minSum);
 
     }
