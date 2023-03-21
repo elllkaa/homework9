@@ -32,7 +32,7 @@ public class Main {
         int maxSum = arr[0];
         int minSum = arr[0];
         for (int i = 0; i < arr.length; i++) {
-            int val = arr[1];
+            int val = arr[i];
             if (val > maxSum) {
                 maxSum = val;
             }
